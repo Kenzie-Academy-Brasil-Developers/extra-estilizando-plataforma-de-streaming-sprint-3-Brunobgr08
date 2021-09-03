@@ -2,7 +2,7 @@
 /*
 Theme Name: Landing Page Kenzie Academy
 Theme URI: https://kenzie.com.br/
-Author: Kenzie Academy 
+Author: Kenzie Academy
 Author URI: https://kenzie.com.br/
 Description: Descrção do thema.
 Version: 1.0
@@ -30,14 +30,15 @@ family=Lato -> Títulos, textos
 
 /* VARIÁVEIS */
 :root{}
-  
+
 /* GERAL */
-html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul{
+html, body, figure, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, a{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
     list-style: none;
+    text-decoration: none;
 }
 img{
     max-width: 800px;
@@ -60,28 +61,333 @@ div.container{
     max-width: 1140px;
     margin:0 auto;
 }
+a{
+    color: #ffffff;
+}
 /* GERAL */
-  
+
 /* HTML */
 html{}
 /* HTML */
-  
+
 /* BODY */
-body{}
+body{
+    background-color: #141414;
+}
 /* BODY */
-  
+.container{
+    padding: 15px 30px;
+}
+
 /* HEADER */
-header{}
+header{
+    position: absolute;
+    width: 100%;
+}
 /* HEADER */
-  
+
+header .container .flex{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header .container .flex :nth-child(2){
+    width: 70px;
+}
+
+header .container .flex :nth-child(3){
+    width: 50%;
+    text-align: right;
+}
+
+header .container .flex .logo img{
+    max-width: 70px;
+    width: 49px;
+}
+
+header .mobile-element{
+    color: #ffffff;
+    font-size: 10px;
+    width: 58px;
+    padding: 5px 0px;
+    display: inline-block;
+}
+
+header .mobile-element .fa-caret-down{
+    font-size: 16px;
+}
+
+header .flex-column {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .flex-column ul{
+    display: none;
+    position: absolute;
+    padding: 2px 5px 2px 5px;
+    left: 97px;
+}
+
+header .flex-column nav:hover ul{
+    display: block;
+    background-color: rgba(109,109,110,0.7);
+
+}
+
+header .flex-column nav:hover ul{
+    display: block;
+}
+
+header .flex-column nav:hover{
+    background-color: rgba(109,109,110,0.7);
+    padding: 0px 6px 2px 6px;
+}
+
+header .flex-column ul li{
+    font-size: 11px;
+    padding: 5px 0px;
+    font-weight: 600;
+}
+
+header .usuario img{
+    border-radius: 5px;
+    width: 28px;
+}
+
+.hidden{
+    display: none;
+}
+
 /* FOOTER */
-footer{}
+footer{
+    border-top: 1px solid rgb(128 128 128 / 26%);
+    color: gray;
+}
+
+footer .container .flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+
+footer .container .flex .flex-column{
+    display: flex;
+}
+
+footer .flex-column ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .flex-column ul li{
+    width: 50%;
+    padding: 10px 0;
+}
+
+footer .flex-column ul li a{
+    color: inherit;
+}
+
+footer .flex-column .redes-sociais{
+    width: 120px;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+footer .flex-column .redes-sociais li a img{
+    width: 20px;
+}
+
+footer .flex-column .redes-sociais li{
+    width: 20px;
+}
+
+footer .flex-column{
+    font-size: 13px;
+}
+
+footer .copyright{
+    font-size: 11px;
+}
 /* FOOTER */
 
 /* INICIAL */
 main{}
 /* INICIAL */
 
+main .secao-destaque{
+    width: 100%;
+    height: 250px;
+    background-image: url(../img/movies/ted.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
+
+main .secao-destaque .container{
+    width: 100%;
+    height: 250px;
+    padding: 0;
+}
+
+main .secao-destaque-conteudo{
+    font-size: 12px;
+    width: 100%;
+    height: 250px;
+}
+
+main .secao-destaque-conteudo figure{
+    padding: 50px 30px 10px 30px;
+}
+
+main .secao-destaque-conteudo figure img{
+    max-width: 160px;
+}
+
+main .secao-destaque-conteudo p{
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0px 30px 5px 30px;
+    color: #ffffff;
+    width: 80%;
+}
+
+main .secao-destaque-buttons{
+    padding: 2px 30px;
+}
+
+main .secao-destaque-buttons .assistir{
+    color: #000000;
+    background-color: #ffffff;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    vertical-align: middle;
+    font-size: 12px;
+}
+
+main .secao-destaque-buttons .assistir img{
+    width: 12px;
+}
+
+main .secao-destaque-buttons .assistir:hover{
+    background-color:rgba(255,255,255,0.75);
+}
+
+main .secao-destaque-buttons .mais-informacoes{
+    background-color: rgba(109,109,110,0.7);
+    color: #ffffff;
+    padding: 4px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+main .secao-destaque-buttons .mais-informacoes img{
+    width: 11px;
+}
+
+main .secao-destaque-buttons .mais-informacoes:hover{
+    background-color: rgba(109,109,110,0.4);
+}
+
+main #secao-continuar-assistindo{
+    padding-top: 215px;
+}
+
+main .secao-catalogo .assistindo{
+    padding-top: 0;
+}
+
+main .secao-catalogo-titulo{
+    font-size: 17px;
+    color: #ffffff;
+    padding-bottom: 5px;
+}
+
+main .flex-column{
+    max-width: 50%;
+    opacity: 60%;
+    text-align: center;
+}
+
+main .flex-column img{
+    width: 98%;
+    border-radius: 5px;
+}
+
+main .flex-column:hover{
+    opacity: 100%;
+}
+
+main .flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+main #secao-originais .container .flex .flex-column a figure{
+    display: none;
+}
+
+main #secao-originais .container .flex :nth-child(1) {
+    background-image: url("../img/movies/amigas.jpg");
+    background-size: cover;
+    width: 49.5%;
+    height: 76.72px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+main #secao-originais .container .flex :nth-child(2) {
+    background-image: url("../img/movies/gg.jpg");
+    background-size: cover;
+    width: 49.5%;
+    height: 76.72px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+main #secao-originais .container .flex :nth-child(3) {
+    background-image: url("../img/movies/papel.jpg");
+    background-size: cover;
+    width: 49.5%;
+    height: 76.72px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+main #secao-originais .container .flex :nth-child(4) {
+    background-image: url("../img/movies/amigas.jpg");
+    background-size: cover;
+    width: 49.5%;
+    height: 76.72px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+main #secao-originais .container .flex :nth-child(5) {
+    background-image: url("../img/movies/gg.jpg");
+    background-size: cover;
+    width: 49.5%;
+    height: 76.72px;
+    border-radius: 5px;
+}
+
+main #secao-originais .container .flex :nth-child(6) {
+    background-image: url("../img/movies/papel.jpg");
+    background-size: cover;
+    width: 49.5%;
+    height: 76.72px;
+    border-radius: 5px;
+}
 /* EXTRAS */
 
 /* para estilizar a scrollbar */
@@ -94,10 +400,355 @@ main{}
 ::-webkit-resizer{}
 
 /* EXTRAS */
-  
+
 
 /* MEDIA QUERIES */
-    @media screen and (min-width: 400px) {}
-  
-    @media screen and (min-width: 800px) {}
+
+
+    @media screen and (min-width: 768px) {
+        main .secao-destaque{
+            height: 300px;
+        }
+
+        main .secao-destaque .container{
+            height: 300px;
+        }
+
+        main .secao-destaque-conteudo{
+            height: 300px;
+        }
+
+        header .flex-column ul{
+            left: 207px;
+        }
+
+        header .flex-column ul li{
+            font-size: 13px;
+            padding: 10px 0px;
+            font-weight: 600;
+        }
+
+        header .container .flex :nth-child(2){
+            width: 90px;
+        }
+
+        header .mobile-element{
+            width: 90px;
+            font-size: 13px;
+        }
+        main .secao-destaque{
+
+            position: static;
+        }
+
+        main .secao-destaque-buttons{
+            padding: 10px 30px;
+        }
+
+        main #secao-continuar-assistindo{
+            padding-top: 0px;
+            margin-top: -80px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.6643032212885154) 85%, rgba(255,255,255,0) 100%);
+        }
+
+        main #secao-originais .container .flex :nth-child(1) {
+            width: 48%;
+            height: 193.141px;
+        }
+
+        main #secao-originais .container .flex :nth-child(2) {
+            width: 48%;
+            height: 193.141px;
+        }
+
+        main #secao-originais .container .flex :nth-child(3) {
+            width: 48%;
+            height: 193.141px;
+        }
+
+        main #secao-originais .container .flex :nth-child(4) {
+            width: 48%;
+            height: 193.141px;
+        }
+
+        main #secao-originais .container .flex :nth-child(5) {
+            width: 48%;
+            height: 193.141px;
+        }
+
+        main #secao-originais .container .flex :nth-child(6) {
+            width: 48%;
+            height: 193.141px;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+
+        div.container{
+            max-width: 1735px;
+            padding: 0px 60px;
+        }
+
+        header{
+            background: linear-gradient(to bottom, rgba(0,0,0,.7) 10%, rgba(0,0,0,0));
+        }
+
+        header .container .flex{
+            height: 50px;
+        }
+
+        header .flex-column-logo{
+            width: 120px;
+            justify-content: flex-start;
+        }
+
+        header .container .flex .logo img{
+            max-width: 92px;
+            width: 92px;
+        }
+
+        header .container .flex .flex-column-menu{
+            width: 350px;
+        }
+
+        header .container .flex .flex-column-menu nav{
+            width: 350px;
+            height: 50px;
+        }
+
+
+        header  .container .mobile-element{
+            display: none;
+        }
+
+        header .container .flex .flex-column-menu nav ul{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+            position: static;
+            width: 350px;
+            height: 50px;
+        }
+
+        header .container .flex .flex-column-menu nav ul li{
+            font-size: 14px;
+            width: 70px;
+            padding: 0;
+            font-weight: 600;
+            display: flex;
+            text-align: center;
+            color: #e5e5e5;
+        }
+
+        header .flex-column nav:hover ul{
+            display: block;
+            background-color: transparent;
+        }
+
+        header .flex-column nav:hover{
+            background-color: transparent;
+            padding: 0;
+        }
+
+        header .container .flex .flex-column-menu nav ul li :hover{
+            color: #b3b3b3;
+        }
+
+        header .container .flex .flex-column-menu nav ul .item-ativo{
+            color: #ffffff;
+        }
+
+        header .container .flex .flex-column-menu nav ul :nth-child(2){
+            width: 45px;
+        }
+
+        header .container .flex .flex-column-menu nav ul :nth-child(3){
+            width: 70px;
+        }
+
+        header .container .flex .flex-column-menu nav ul :nth-child(4){
+            width: 70px;
+        }
+
+        header .container .flex .flex-column-menu nav ul :nth-child(5){
+            width: 110px;
+        }
+
+        header .container .flex .flex-column-menu nav ul li a{
+            width: 100%;
+            color: inherit;
+        }
+
+        header .flex-column-user{
+            align-self: flex-end;
+        }
+
+        header .flex-column-user .menu-usuario {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90px;
+        }
+
+        header .container .flex .flex-column-user .menu-usuario .pesquisar {
+            display: block;
+            width: 32px;
+            font-size: 28px;
+            color: #ffffff;
+        }
+
+        header .container .flex .flex-column-user .menu-usuario .pesquisar :hover{
+            color: #b3b3b3;;
+        }
+
+        header .container .flex .flex-column-user .menu-usuario .usuario {
+            width: 32px;
+        }
+
+        header .container .flex .flex-column-user .menu-usuario .usuario :hover{
+            opacity: 60%;
+        }
+
+        header .flex-column-user .usuario img{
+            width: 32px;
+        }
+
+        main .secao-destaque{
+            height: 100vh;
+            background-position-y: 0px;
+            background-position: center;
+            position: static;
+        }
+
+        main .secao-destaque .container{
+            height: 100vh;
+        }
+
+        main .secao-destaque-conteudo{
+            height: 100vh;
+        }
+
+        main .secao-destaque-buttons{
+            padding: 10px 60px;
+            max-width: 550px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        main .secao-destaque-buttons .assistir{
+            font-size: 22px;
+            padding: 10px 35px;
+        }
+
+        main .secao-destaque-buttons .mais-informacoes{
+            font-size: 22px;
+            padding: 10px 35px;
+        }
+
+        main .secao-destaque-conteudo figure{
+            padding: 130px 60px 10px 60px;
+        }
+
+        main .secao-destaque-conteudo figure img{
+            max-width: 650px;
+        }
+
+        main .secao-destaque-conteudo p{
+            font-size: 26px;
+            padding: 10px 60px 5px 60px;
+            width: 45%;
+            text-shadow: 2px 2px 4px rgb(0 0 0 / 45%);;
+        }
+
+        main #secao-continuar-assistindo{
+            padding-top: 0px;
+            margin-top: -120px;
+            background: linear-gradient(to bottom,rgba(20,20,20,0) 0,rgba(20,20,20,.15) 15%,rgba(20,20,20,.35) 29%,rgba(20,20,20,.58) 44%,#141414 68%,#141414 100%);
+        }
+
+        main #secao-originais .container .flex :nth-child(1) {
+            background-image: url("../img/movies/good.webp");
+            background-position: center;
+            width: 16%;
+            height: 400px;
+        }
+
+        main #secao-originais .container .flex :nth-child(2) {
+            background-image: url("../img/movies/papel2.webp");
+            background-position: center;
+            width: 16%;
+            height: 400px;
+        }
+
+        main #secao-originais .container .flex :nth-child(3) {
+            background-image: url("../img/movies/good.webp");
+            background-position: center;
+            width: 16%;
+            height: 400px;
+        }
+
+        main #secao-originais .container .flex :nth-child(4) {
+            background-image: url("../img/movies/papel2.webp");
+            background-position: center;
+            width: 16%;
+            height: 400px;
+        }
+
+        main #secao-originais .container .flex :nth-child(5) {
+            background-image: url("../img/movies/good.webp");
+            background-position: center;
+            width: 16%;
+            height: 400px;
+        }
+
+        main #secao-originais .container .flex :nth-child(6) {
+            background-image: url("../img/movies/papel2.webp");
+            background-position: center;
+            width: 16%;
+            height: 400px;
+        }
+
+        main .secao-catalogo {
+            margin-top: 20px;
+        }
+
+        main .secao-catalogo h2{
+            font-size: 26px;
+            color: #e5e5e5;
+        }
+
+        main .flex-column{
+            max-width: 287px;
+        }
+
+        main .flex{
+            flex-wrap: nowrap;
+        }
+        footer{
+            margin-top: 40px;
+
+        }
+
+        footer .container{
+            margin-top: 10px;
+            width: 60%;
+        }
+
+        footer .container .flex{
+            flex-direction: row;
+            height: 180px;
+        }
+
+        footer .flex-column ul {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: 200px;
+        }
+
+        footer .flex-column .redes-sociais {
+            flex-direction: row;
+        }
+    }
 /* MEDIA QUERIES */
